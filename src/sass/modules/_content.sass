@@ -1,23 +1,33 @@
 .content
-	@extend %absolute-wrap
-	margin: 0 16rem
+	margin: 12.5rem $gutter 2rem
 
-	&:before
-		content: ""
-		display: inline-block
-		height: 100%
-		vertical-align: middle
-		margin-right: -0.25em
+	+breakpoint(43.75rem)
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		margin: 0 16rem
 
-	&__inner
-		display: inline-block
-		vertical-align: middle
+		&:before
+			content: ""
+			display: inline-block
+			height: 100%
+			vertical-align: middle
+			margin-right: -0.25em
+
+		&__inner
+			display: inline-block
+			vertical-align: middle
 
 .title
-	font-size: 2rem
+	font-size: 1.8rem
 	line-height: 1.2em
 	font-weight: 700
 	margin-bottom: 1rem
+
+	+breakpoint(43.75rem)
+		font-size: 2rem
 
 	&__line
 		display: block
@@ -43,11 +53,17 @@
 
 .social
 	margin-top: 2rem
-	font-size: 3rem
+	font-size: 2rem
+
+	+breakpoint(43.75rem)
+		font-size: 3rem
 
 	> li
 		float: left
-		margin-right: 4rem
+		margin-right: 2rem
+
+		+breakpoint(43.75rem)
+			margin-right: 4rem
 
 		> a 
 			text-decoration: none
