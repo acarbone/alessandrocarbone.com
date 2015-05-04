@@ -5,14 +5,28 @@
 //
 // *************************************
 
+@keyframes BG
+	0%
+		background-position: 0% 53%
+	50%
+		background-position: 100% 48%
+	100%
+		background-position: 0% 53%
+
 html
 	font-size: 62.5%
+	height: 100%
 
 body
 	+rem(font-size, 16px)
 	line-height: 1.2em
+	height: 100%
 	-webkit-font-smoothing: antialiased
-	background-color: blue
+	font-family: 'Raleway', sans-serif
+	background: linear-gradient(83deg, #d7edd6, #ffffff)
+	background-size: 400% 400%
+
+	animation: BG 30s ease infinite
 
 *,
 *:after,
@@ -28,30 +42,3 @@ button
 
 	&:focus
 		outline: none
-
-.clearfix
-	@extend %clearfix
-
-.visible-tablet,
-.visible-desktop,
-.hidden-phone
-	+breakpoint($s $m)
-		display: none !important
-
-.visible-desktop,
-.hidden-tablet
-	+breakpoint($m $l)
-		display: none !important
-
-.visible-tablet,
-.hidden-desktop
-	+breakpoint($l)
-		display: none !important
-
-.visible-phone
-	+breakpoint($m)
-		display: none !important
-
-a[href^=tel]
-	color: inherit
-	text-decoration: none

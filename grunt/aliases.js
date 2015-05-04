@@ -7,7 +7,8 @@ module.exports = {
 		'newer:output_twig:dist',
 		'newer:imagemin:dist',
 		'newer:sass:dist',
-		'newer:autoprefixer:dist'
+		'newer:autoprefixer:dist',
+		'copy:dist'
 	],
 	'dev': [
 		'output_twig:dev',

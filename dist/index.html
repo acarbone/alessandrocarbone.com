@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title></title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" href="css/screen.css">
+		<link href='//fonts.googleapis.com/css?family=Raleway:400,200,700' rel='stylesheet' type='text/css'>
+	</head>
+	<body>
+			<header class="header">
+		<h1>Alessandro Carbone</h1>
+		<h2>Senior Web Developer</h2>
+		<p class="located">From beautiful Como, Italy</p>
+	</header>
+
+	<section class="content">
+		<div class="content__inner">
+			<h3 class="title">
+				<span class="title__line title__line--1">Hi!</span>
+				<span class="title__line title__line--2">How are you?</span>
+				<span class="title__line title__line--3">What a beautiful day to <span class="js-fill" data-fill-choices="read,sing,play,work,swim,run,love">live</span>!</span>
+				<span class="title__line title__line--4">When, if not today?</span>
+			</h3>
+			<p class="text">Bye.</p>
+
+			<ul class="social">
+				<li>
+					<a href="https://github.com/acarbone" class="icon-github" target="_blank"></a>
+				</li>
+				<li>
+					<a href="https://it.linkedin.com/in/alecarbo" class="icon-linkedin" target="_blank"></a>
+				</li>
+				<li>
+					<a href="https://twitter.com/alecarbo" class="icon-twitter" target="_blank"></a>
+				</li>
+				<li>
+					<a href="https://instagram.com/acarbone87/" class="icon-instagram" target="_blank"></a>
+				</li>
+				<li>
+					<a href="mailto:ale.carbo@gmail.com?subject=Hi!" class="icon-mail" target="_blank"></a>
+				</li>
+			</ul>
+		</div>
+	</section>
+
+	<script>
+		document.addEventListener("DOMContentLoaded", function(event) {
+			document.body.className += " loaded";
+		});
+		
+		[].forEach.call( document.querySelectorAll('.js-fill'), function(el) {
+			var _choices = el.getAttribute('data-fill-choices'),
+				_list    = _choices.split(','),
+				_choice  = _list[ getRandomArbitrary(0, _list.length) ];
+
+			el.innerHTML = _choice;
+		} );
+		function getRandomArbitrary(min, max) {
+			return parseInt(Math.random() * (max - min) + min);
+		}
+	</script>
+	</body>
+</html>
