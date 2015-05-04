@@ -1,0 +1,22 @@
+{
+  "name": "FrontendMicroFramework",
+  "version": "0.0.0",
+  "homepage": "https://github.com/acarbone/FrontendMicroFramework",
+  "authors": [
+    "Alessandro Carbone <ale.carbo@gmail.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "modernizr": "~2.8.3"
+  }
+}
